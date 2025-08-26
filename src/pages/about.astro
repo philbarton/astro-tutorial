@@ -1,7 +1,9 @@
 ---
+import '../styles/global.css';
 const pageTitle = "About Me";
 const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
 const happy = false;
+const skillColor = "grey";
 ---
 <html lang="en">
 <head>
@@ -10,6 +12,14 @@ const happy = false;
     <meta name="viewport" content="width=device-width"/>
     <meta name="generator" content={Astro.generator}/>
     <title>{pageTitle}</title>
+    <style define:vars={{skillColor}}>
+        h1 {
+            color: purple;
+        }
+        .skill {
+            color: var(--skillColor);
+            font-weight: bold;
+        }  </style>
 </head>
 <body>
 <a href="/">Home</a>
@@ -26,7 +36,7 @@ const happy = false;
 
 <p>My skills are:</p>
 <ul>
-    {skills.map((skill) => <li>{skill}</li>)}
+    {skills.map((skill) => <li class="skill">{skill}</li>)}
 </ul>
 
 </body>
