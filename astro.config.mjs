@@ -3,14 +3,14 @@ import { defineConfig } from 'astro/config';
 
 import preact from '@astrojs/preact';
 
-//import node from '@astrojs/node';
-
-import netlify from '@astrojs/netlify';
+import node from '@astrojs/node';
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://example.com",
   integrations: [preact()],
 
-  adapter: netlify(),
+  adapter: node({
+    mode: 'standalone'
+  })
 });
