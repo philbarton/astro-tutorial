@@ -1,7 +1,12 @@
 ---
+import Greeting from '../components/Greeting';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ServerTime from "../components/ServerTime.astro";
 const pageTitle = "Home Page";
+export const prerender = true
 ---
 <BaseLayout pageTitle={pageTitle}>
     <h2>My awesome blog subtitle</h2>
+    <ServerTime/>
+    <Greeting client:visible messages={["Hej", "Hallo", "Hola", "Habari"]} />
 </BaseLayout>
