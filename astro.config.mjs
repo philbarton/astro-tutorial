@@ -5,8 +5,12 @@ import preact from '@astrojs/preact';
 
 //import node from '@astrojs/node';
 
+import netlify from '@astrojs/netlify';
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://example.com",
-  integrations: [preact()]
+  integrations: [preact()],
+
+  adapter: netlify(),
 });
