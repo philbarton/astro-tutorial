@@ -7,6 +7,6 @@ export const prerender = true
 ---
 <BaseLayout pageTitle={pageTitle}>
     <h2>My awesome blog subtitle</h2>
-    <ServerTime/>
+    <ServerTime server:defer/>
     <Greeting client:visible messages={["Hej", "Hallo", "Hola", "Habari"]} />
 </BaseLayout>
