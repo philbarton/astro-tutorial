@@ -11,10 +11,4 @@ export default defineConfig({
   site: "https://example.com",
   integrations: [preact()],
   adapter: netlify(),
-  server: {
-    allowedHosts: [
-      "localhost",
-      "*.netlify.app" // 👈 add your Netlify preview host
-    ]
-  }
 });
