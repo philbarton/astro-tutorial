@@ -11,4 +11,7 @@ export default defineConfig({
   site: "https://example.com",
   integrations: [preact()],
   adapter: netlify(),
+  server: {
+    allowedHosts: true,
+  }
 });

@@ -1,7 +1,10 @@
-import { defineConfig } from 'vite';
-import netlify from '@netlify/vite-plugin';
+import { defineConfig } from "vite";
 
-// https://vitejs.dev/config/
 export default defineConfig({
-    plugins: [ netlify()],
+    server: {
+        allowedHosts: [
+            "localhost",
+            "devserver-main--philb-astro.netlify.app", // 👈 add your Netlify dev server host
+        ],
+    },
 });
