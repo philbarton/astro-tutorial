@@ -4,12 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import ServerTime from "../components/ServerTime.astro";
 import ServerTimeFB from "../components/ServerTimeFB.astro";
 const pageTitle = "Home Page";
-export const prerender = false
 ---
 <BaseLayout pageTitle={pageTitle}>
     <h2>My awesome blog subtitles</h2>
-    <ServerTime server:defer>
-        <ServerTimeFB slot="fallback"/>
-    </ServerTime>
-    <Greeting client:visible messages={["Hej", "Hallo", "Hola", "Habari"]} />
 </BaseLayout>
